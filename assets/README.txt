@@ -1,1 +1,1 @@
-Place future images/videos here. The current V4 uses CSS-based visuals and does not require external assets.
+Put official SWS event photos/videos here when ready. Gallery panels can then be converted to real images.

@@ -1,122 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const button = document.getElementById("submitButton");
-  const statusBox = document.getElementById("formStatus");
-  const navLinks = document.getElementById("navLinks");
-  const menuToggle = document.getElementById("menuToggle");
-  const year = document.getElementById("year");
+document.addEventListener("DOMContentLoaded",()=>{
+  const menu=document.getElementById("menu"), links=document.getElementById("navLinks");
+  menu.addEventListener("click",()=>{const open=links.classList.toggle("open");menu.setAttribute("aria-expanded",open)});
+  links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");menu.setAttribute("aria-expanded","false")}));
+  document.getElementById("year").textContent=new Date().getFullYear();
 
-  year.textContent = new Date().getFullYear();
-
-  menuToggle?.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(open));
-  });
-
-  navLinks?.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuToggle?.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  function setError(fieldName, message) {
-    const input = document.getElementById(fieldName);
-    const field = input?.closest(".field");
-    const error = document.querySelector(`[data-error-for="${fieldName}"]`);
-    field?.classList.toggle("invalid", Boolean(message));
-    if (error) error.textContent = message || "";
-  }
-
-  function validate() {
-    let valid = true;
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const subject = document.getElementById("subject");
-    const message = document.getElementById("message");
-
-    setError("name", "");
-    setError("email", "");
-    setError("subject", "");
-    setError("message", "");
-
-    if (!name.value.trim()) {
-      setError("name", "Please enter your full name.");
-      valid = false;
-    }
-
-    if (!email.value.trim()) {
-      setError("email", "Please enter your email address.");
-      valid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-      setError("email", "Please enter a valid email address.");
-      valid = false;
-    }
-
-    if (!subject.value.trim()) {
-      setError("subject", "Please enter a subject.");
-      valid = false;
-    }
-
-    if (!message.value.trim()) {
-      setError("message", "Please enter your message.");
-      valid = false;
-    }
-
-    return valid;
-  }
-
-  function showStatus(type, title, text) {
-    statusBox.className = `form-status show ${type}`;
-    statusBox.innerHTML = `<strong>${title}</strong><br>${text}`;
-  }
-
-  form?.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    if (!validate()) {
-      showStatus("error", "Please check the form.", "Complete the highlighted fields and try again.");
-      return;
-    }
-
-    button.disabled = true;
-    button.classList.add("loading");
-    statusBox.className = "form-status";
-    statusBox.textContent = "";
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { "Accept": "application/json" }
-      });
-
-      if (response.ok) {
-        form.reset();
-        showStatus(
-          "success",
-          "✓ Message sent successfully",
-          "Thank you for contacting SWS Technology. Our team will get back to you shortly."
-        );
-      } else {
-        let message = "We could not send your message. Please try again.";
-        try {
-          const data = await response.json();
-          if (data?.errors?.length) {
-            message = data.errors.map(error => error.message).join(" ");
-          }
-        } catch (_) {}
-        showStatus("error", "⚠ Message not sent", message);
-      }
-    } catch (error) {
-      showStatus(
-        "error",
-        "⚠ Connection error",
-        "Please check your internet connection and try again."
-      );
-    } finally {
-      button.disabled = false;
-      button.classList.remove("loading");
-    }
+  const form=document.getElementById("contactForm"), btn=document.getElementById("submitBtn"), status=document.getElementById("formStatus");
+  const required=["name","email","subject","message"];
+  const show=(type,title,msg)=>{status.className=`status show ${type}`;status.innerHTML=`<strong>${title}</strong><br>${msg}`};
+  const valid=()=>{
+    let ok=true;
+    required.forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){el.style.borderColor="var(--danger)";ok=false}else el.style.borderColor=""});
+    const email=document.getElementById("email");
+    if(email.value.trim()&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){email.style.borderColor="var(--danger)";ok=false}
+    return ok;
+  };
+  form.addEventListener("input",e=>{if(e.target.matches("input,textarea"))e.target.style.borderColor=""});
+  form.addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!valid()){show("error","Please check the form.","Complete the required fields and enter a valid email.");return}
+    btn.disabled=true;btn.classList.add("loading");status.className="status";
+    try{
+      const r=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+      if(r.ok){form.reset();show("success","✓ Message sent successfully","Thank you. SWS Technology will get back to you shortly.");}
+      else{let msg="We could not send your message. Please try again.";try{const d=await r.json();if(d.errors?.length)msg=d.errors.map(x=>x.message).join(" ")}catch(_){ }show("error","⚠ Message not sent",msg)}
+    }catch(_){show("error","⚠ Connection error","Please check your internet connection and try again.")}
+    finally{btn.disabled=false;btn.classList.remove("loading")}
   });
 });
