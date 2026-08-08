@@ -1,362 +1,225 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SWS Technology — Exposition professionnelle en Algérie, octobre 2026. Rencontrez les entreprises, découvrez les innovations et développez vos opportunités.">
+  <meta name="description" content="SWS Technology — Technology exhibitions, AI conferences, Industry 4.0 forums and innovation summits in Algeria and beyond.">
   <meta name="theme-color" content="#07111f">
-  <title>SWS Technology | Exposition Octobre 2026</title>
-
+  <title>SWS Technology | Technology Events</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- Navigation -->
-  <header class="site-header" id="top">
-    <nav class="navbar container">
-      <a class="brand" href="#accueil" aria-label="SWS Technology accueil">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span data-i18n="topbar">Technology Events • Algeria & Beyond</span>
+      <div class="top-links">
+        <a href="mailto:sws.technology@macirvoyages.com">sws.technology@macirvoyages.com</a>
+        <a href="https://wa.me/213775964958" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="SWS Technology">
         <span class="brand-mark">SWS</span>
-        <span class="brand-text">
-          <strong>SWS TECHNOLOGY</strong>
-          <small>EVENTS &amp; EXHIBITIONS</small>
-        </span>
+        <span><strong>SWS TECHNOLOGY</strong><small data-i18n="brandSub">Technology Events</small></span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#accueil">Accueil</a>
-        <a href="#exposition">L'exposition</a>
-        <a href="#opportunites">Opportunités</a>
-        <a href="#programme">Programme</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact" class="nav-cta">Participer</a>
-      </div>
-    </nav>
+      <nav class="nav-menu">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#sectors" data-i18n="navSectors">Sectors</a>
+        <a href="#process" data-i18n="navProcess">Our Process</a>
+        <a href="#events" data-i18n="navEvents">Events</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#contact" class="nav-cta" data-i18n="navContact">Contact</a>
+        <button class="lang-btn" id="langBtn" type="button">FR</button>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero" id="accueil">
-      <div class="hero-bg"></div>
+    <section class="hero" id="home">
       <div class="hero-grid"></div>
-
       <div class="container hero-content">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> ALGÉRIE • OCTOBRE 2026</div>
-          <h1>Le rendez-vous des <em>entreprises</em> et de l'innovation.</h1>
-          <p class="hero-lead">
-            Une exposition professionnelle conçue pour rapprocher les entreprises,
-            les décideurs, les partenaires et les nouvelles opportunités de marché.
-          </p>
-
+          <div class="eyebrow"><span></span><span data-i18n="heroEyebrow">TECHNOLOGY EVENTS • ALGERIA</span></div>
+          <h1 data-i18n="heroTitle">Creating world-class <em>technology events.</em></h1>
+          <p data-i18n="heroText">Premium exhibitions, AI conferences, industrial forums and innovation summits that connect technology leaders with future opportunities.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Je veux participer <span>→</span></a>
-            <a href="#exposition" class="btn btn-ghost">Découvrir l'événement</a>
+            <a href="#events" class="btn btn-primary" data-i18n="explore">Explore Events <span>↗</span></a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="contactUs">Contact Us</a>
           </div>
-
-          <div class="hero-trust">
-            <span>Organisé par</span>
-            <strong>SWS TECHNOLOGY</strong>
+          <div class="hero-meta">
+            <div><strong>AI</strong><span>Artificial Intelligence</span></div>
+            <div><strong>4.0</strong><span>Industry 4.0</span></div>
+            <div><strong>∞</strong><span>Innovation</span></div>
           </div>
         </div>
 
-        <div class="hero-card reveal">
-          <div class="hero-card-top">
-            <span class="status-dot"></span>
-            <span>ÉVÉNEMENT À VENIR</span>
-          </div>
-          <div class="hero-date">OCT</div>
-          <div class="hero-year">2026</div>
-          <div class="hero-location">📍 Algérie</div>
-          <div class="hero-card-line"></div>
-          <p>Une plateforme pour présenter vos solutions, rencontrer vos futurs clients et développer votre réseau.</p>
+        <div class="hero-card reveal delay-1">
+          <div class="event-card-glow"></div>
+          <div class="event-card-top"><span data-i18n="flagship">FLAGSHIP EVENT</span><span>2026</span></div>
+          <div class="event-date"><b>OCT</b><strong>2026</strong></div>
+          <div class="event-card-line"></div>
+          <h3 data-i18n="eventTitle">Technology & Innovation</h3>
+          <p data-i18n="eventText">Exhibition • Conference • B2B • Innovation</p>
+          <a href="#contact" class="card-link" data-i18n="reserve">Become a Partner →</a>
         </div>
       </div>
+      <div class="scroll-cue"><span></span> SCROLL TO DISCOVER</div>
+    </section>
 
-      <div class="hero-bottom">
-        <div class="container hero-stats">
-          <div><strong>01</strong><span>Exposition<br>professionnelle</span></div>
-          <div><strong>02</strong><span>Networking &amp;<br>rencontres B2B</span></div>
-          <div><strong>03</strong><span>Conférences &amp;<br>présentations</span></div>
-          <div><strong>04</strong><span>Opportunités<br>commerciales</span></div>
+    <section class="section intro-section">
+      <div class="container two-col">
+        <div class="section-label reveal"><span>01</span><span data-i18n="sectionSpeciality">OUR SPECIALITY</span></div>
+        <div class="intro-copy reveal">
+          <h2 data-i18n="introTitle">Where technology meets <span>opportunity.</span></h2>
+          <p data-i18n="introText">SWS TECHNOLOGY delivers professional technology events across strategic industries, bringing together innovators, companies, startups, institutions and decision-makers.</p>
         </div>
       </div>
     </section>
 
-    <!-- Exhibition -->
-    <section class="section section-light" id="exposition">
+    <section class="section sectors" id="sectors">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="kicker">01 — L'EXPOSITION</span>
-            <h2>Un espace où les <span>idées deviennent</span> des opportunités.</h2>
-          </div>
-          <p>
-            SWS Technology crée une expérience professionnelle qui met en relation
-            les acteurs économiques et valorise les solutions qui construisent l'avenir.
-          </p>
+        <div class="section-head reveal">
+          <div><div class="kicker">02 / EXPERTISE</div><h2 data-i18n="sectorsTitle">Technology sectors</h2></div>
+          <p data-i18n="sectorsText">Specialized events across the technologies shaping the future.</p>
         </div>
-
-        <div class="feature-grid">
-          <article class="feature-card feature-main reveal">
-            <div class="feature-image image-one"></div>
-            <div class="feature-overlay">
-              <span>EXPOSITION</span>
-              <h3>Présentez votre entreprise avec impact.</h3>
-              <p>Un espace pensé pour mettre en valeur votre marque, vos produits et vos solutions.</p>
-            </div>
-          </article>
-
-          <article class="feature-card reveal">
-            <div class="feature-icon">◈</div>
-            <span class="card-number">01</span>
-            <h3>Visibilité</h3>
-            <p>Exposez votre savoir-faire devant un public professionnel et qualifié.</p>
-          </article>
-
-          <article class="feature-card dark reveal">
-            <div class="feature-icon">↗</div>
-            <span class="card-number">02</span>
-            <h3>Business</h3>
-            <p>Créez de nouvelles relations commerciales et développez votre réseau.</p>
-          </article>
+        <div class="sector-grid">
+          <article class="sector reveal"><div class="sector-icon">AI</div><h3 data-i18n="s1">Artificial Intelligence</h3><p data-i18n="s1p">AI conferences, machine learning, generative AI and intelligent systems.</p><span>01</span></article>
+          <article class="sector reveal"><div class="sector-icon">4.0</div><h3 data-i18n="s2">Industry 4.0</h3><p data-i18n="s2p">Smart manufacturing, automation and digital factory solutions.</p><span>02</span></article>
+          <article class="sector reveal"><div class="sector-icon">RX</div><h3 data-i18n="s3">Robotics</h3><p data-i18n="s3p">Automation, robotics and next-generation industrial technologies.</p><span>03</span></article>
+          <article class="sector reveal"><div class="sector-icon">CY</div><h3 data-i18n="s4">Cyber Security</h3><p data-i18n="s4p">Future security, cloud protection and digital trust.</p><span>04</span></article>
+          <article class="sector reveal"><div class="sector-icon">SC</div><h3 data-i18n="s5">Smart Cities</h3><p data-i18n="s5p">Smart mobility, sustainable cities and urban innovation.</p><span>05</span></article>
+          <article class="sector reveal"><div class="sector-icon">DX</div><h3 data-i18n="s6">Digital Transformation</h3><p data-i18n="s6p">Digital strategies and technologies that transform organizations.</p><span>06</span></article>
         </div>
       </div>
     </section>
 
-    <!-- Opportunities -->
-    <section class="section section-dark" id="opportunites">
+    <section class="section process" id="process">
       <div class="container">
-        <div class="section-heading heading-dark reveal">
-          <div>
-            <span class="kicker">02 — POURQUOI PARTICIPER ?</span>
-            <h2>Plus qu'un stand.<br><span>Une vraie opportunité.</span></h2>
-          </div>
-          <p>
-            Une présence professionnelle vous permet de renforcer votre image,
-            rencontrer de nouveaux partenaires et générer des opportunités concrètes.
-          </p>
+        <div class="section-head reveal">
+          <div><div class="kicker">03 / METHOD</div><h2 data-i18n="processTitle">How we create successful events</h2></div>
+          <p data-i18n="processText">From the first concept to the final media coverage, every event follows a strategic process.</p>
         </div>
-
-        <div class="opportunity-grid">
-          <article class="opportunity reveal">
-            <span>01</span>
-            <div class="opportunity-icon">◎</div>
-            <h3>Présence de marque</h3>
-            <p>Donnez à votre entreprise une visibilité forte dans un environnement professionnel.</p>
-          </article>
-          <article class="opportunity reveal">
-            <span>02</span>
-            <div class="opportunity-icon">↔</div>
-            <h3>Networking B2B</h3>
-            <p>Rencontrez des dirigeants, acheteurs, partenaires et acteurs de votre secteur.</p>
-          </article>
-          <article class="opportunity reveal">
-            <span>03</span>
-            <div class="opportunity-icon">✦</div>
-            <h3>Innovation</h3>
-            <p>Découvrez les tendances, technologies et solutions qui transforment les marchés.</p>
-          </article>
-          <article class="opportunity reveal">
-            <span>04</span>
-            <div class="opportunity-icon">▣</div>
-            <h3>Conférences</h3>
-            <p>Participez à des présentations et échanges autour des enjeux économiques actuels.</p>
-          </article>
+        <div class="process-grid">
+          <div class="step reveal"><b>01</b><h3 data-i18n="p1">Concept</h3><p data-i18n="p1p">Create the event vision and objectives.</p></div>
+          <div class="step reveal"><b>02</b><h3 data-i18n="p2">Planning</h3><p data-i18n="p2p">Venue, exhibitors, speakers and logistics.</p></div>
+          <div class="step reveal"><b>03</b><h3 data-i18n="p3">Marketing</h3><p data-i18n="p3p">Digital campaigns and media partnerships.</p></div>
+          <div class="step reveal"><b>04</b><h3 data-i18n="p4">Registration</h3><p data-i18n="p4p">Online registration and visitor management.</p></div>
+          <div class="step reveal"><b>05</b><h3 data-i18n="p5">Event Day</h3><p data-i18n="p5p">Professional management and live experience.</p></div>
+          <div class="step reveal"><b>06</b><h3 data-i18n="p6">Media Coverage</h3><p data-i18n="p6p">Photography, video production and promotion.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Countdown -->
-    <section class="countdown-section">
-      <div class="container countdown-wrap reveal">
-        <div>
-          <span class="kicker">RENDEZ-VOUS</span>
-          <h2>Octobre 2026</h2>
-          <p>La date exacte et le programme détaillé seront annoncés prochainement.</p>
-        </div>
-        <div class="countdown" id="countdown" aria-label="Compte à rebours">
-          <div><strong id="days">--</strong><span>Jours</span></div>
-          <div><strong id="hours">--</strong><span>Heures</span></div>
-          <div><strong id="minutes">--</strong><span>Minutes</span></div>
-          <div><strong id="seconds">--</strong><span>Secondes</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Program -->
-    <section class="section section-light" id="programme">
+    <section class="section flagship" id="events">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="kicker">03 — PROGRAMME</span>
-            <h2>Une journée pensée pour <span>faire avancer</span> les projets.</h2>
+        <div class="feature-event reveal">
+          <div class="feature-content">
+            <div class="kicker">04 / FLAGSHIP • OCTOBER 2026</div>
+            <h2 data-i18n="featureTitle">The meeting point for <span>technology & innovation.</span></h2>
+            <p data-i18n="featureText">A professional platform designed to connect exhibitors, technology leaders, startups, institutions and business decision-makers.</p>
+            <div class="feature-tags"><span>EXHIBITION</span><span>CONFERENCE</span><span>B2B</span><span>INNOVATION</span></div>
+            <a href="#contact" class="btn btn-primary" data-i18n="partner">Become an Exhibitor</a>
           </div>
-          <p>Le programme sera adapté aux besoins des exposants et visiteurs professionnels.</p>
+          <div class="feature-side">
+            <div class="big-oct">OCT<span>2026</span></div>
+            <div class="location"><small data-i18n="locationLabel">LOCATION</small><strong>Ouled Brahim, Sétif<br>Algeria</strong></div>
+          </div>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="time">09:00</div>
-            <div class="timeline-line"><span></span></div>
-            <div><h3>Accueil &amp; ouverture</h3><p>Accueil des exposants, visiteurs et partenaires.</p></div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="time">10:00</div>
-            <div class="timeline-line"><span></span></div>
-            <div><h3>Visite de l'exposition</h3><p>Découverte des stands et des solutions présentées.</p></div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="time">11:30</div>
-            <div class="timeline-line"><span></span></div>
-            <div><h3>Conférence &amp; présentation</h3><p>Interventions, démonstrations et échanges professionnels.</p></div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="time">14:00</div>
-            <div class="timeline-line"><span></span></div>
-            <div><h3>Rencontres B2B</h3><p>Rendez-vous et networking entre entreprises et partenaires.</p></div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="time">17:00</div>
-            <div class="timeline-line"><span></span></div>
-            <div><h3>Clôture &amp; networking</h3><p>Derniers échanges et perspectives de collaboration.</p></div>
-          </div>
+        <div class="event-cards">
+          <article class="event-mini reveal"><span>AI</span><h3>AI & Machine Learning Expo</h3><p>Artificial Intelligence</p><a href="#contact">Discover More →</a></article>
+          <article class="event-mini reveal"><span>4.0</span><h3>Smart Manufacturing Summit</h3><p>Industry 4.0</p><a href="#contact">Discover More →</a></article>
+          <article class="event-mini reveal"><span>RX</span><h3>Robotics & Future Tech</h3><p>Innovation</p><a href="#contact">Discover More →</a></article>
         </div>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="section gallery-section" id="galerie">
+    <section class="section impact">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="kicker">04 — GALERIE</span>
-            <h2>Une expérience <span>visuelle</span> et professionnelle.</h2>
-          </div>
-          <p>Les visuels ci-dessous sont des images de démonstration. Nous pourrons les remplacer par vos propres photos.</p>
+        <div class="impact-head reveal"><div class="kicker">05 / OUR IMPACT</div><h2 data-i18n="impactTitle">Driving technology events forward.</h2></div>
+        <div class="stats">
+          <div class="stat reveal"><strong data-count="6">0</strong><span data-i18n="stat1">Technology Sectors</span></div>
+          <div class="stat reveal"><strong data-count="3">0</strong><span data-i18n="stat2">Flagship Event Concepts</span></div>
+          <div class="stat reveal"><strong data-count="8">0</strong><span data-i18n="stat3">Technology Fields</span></div>
+          <div class="stat reveal"><strong>2026</strong><span data-i18n="stat4">Next Event Season</span></div>
         </div>
+      </div>
+    </section>
 
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">06 / VISUAL EXPERIENCE</div><h2 data-i18n="galleryTitle">Gallery</h2></div>
+          <p data-i18n="galleryText">A visual language built around technology, people, ideas and live experiences.</p>
+        </div>
         <div class="gallery-grid">
-          <button class="gallery-item gallery-large reveal" data-image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=85" aria-label="Ouvrir l'image">
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=85" alt="Conférence professionnelle">
-            <span>CONFÉRENCE</span>
-          </button>
-          <button class="gallery-item reveal" data-image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" aria-label="Ouvrir l'image">
-            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Réunion professionnelle">
-            <span>NETWORKING</span>
-          </button>
-          <button class="gallery-item reveal" data-image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" aria-label="Ouvrir l'image">
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Espace professionnel">
-            <span>ESPACE</span>
-          </button>
-          <button class="gallery-item reveal" data-image="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=85" aria-label="Ouvrir l'image">
-            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=85" alt="Événement professionnel">
-            <span>ÉVÉNEMENT</span>
-          </button>
-        </div>
-
-        <div class="video-box reveal">
-          <div class="video-content">
-            <span class="video-label">VIDEO</span>
-            <h3>Découvrez l'univers<br>de SWS Technology.</h3>
-            <p>Ajoutez ici votre vidéo de présentation de l'exposition.</p>
-            <button class="play-button" id="videoDemo">▶</button>
-          </div>
+          <button class="gallery-item g1 reveal" data-title="Technology Exhibition"><span>TECHNOLOGY</span></button>
+          <button class="gallery-item g2 reveal" data-title="AI Conference"><span>AI CONFERENCE</span></button>
+          <button class="gallery-item g3 reveal" data-title="Industry 4.0"><span>INDUSTRY 4.0</span></button>
+          <button class="gallery-item g4 reveal" data-title="Innovation Summit"><span>INNOVATION</span></button>
+          <button class="gallery-item g5 reveal" data-title="B2B Networking"><span>B2B NETWORKING</span></button>
+          <button class="gallery-item g6 reveal" data-title="Future Technologies"><span>FUTURE TECH</span></button>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section contact-section" id="contact">
+    <section class="section partners">
+      <div class="container">
+        <div class="kicker">07 / TRUSTED TECHNOLOGY ECOSYSTEM</div>
+        <div class="partner-row">
+          <span>Microsoft</span><span>Google</span><span>NVIDIA</span><span>Huawei</span><span>Siemens</span><span>IBM</span><span>Oracle</span><span>Cisco</span>
+        </div>
+        <p class="partner-note">Technology ecosystem examples — not presented as confirmed sponsors or partners of SWS Technology.</p>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy reveal">
-          <span class="kicker">05 — PARTICIPER</span>
-          <h2>Construisons votre <span>présence</span> à l'exposition.</h2>
-          <p>
-            Vous êtes une entreprise, une marque, un partenaire ou un professionnel ?
-            Contactez SWS Technology pour recevoir les informations de participation.
-          </p>
-
-          <div class="contact-details">
-            <div><span>📍</span><div><small>LOCALISATION</small><strong>Algérie</strong></div></div>
-            <div><span>✉</span><div><small>EMAIL</small><strong>contact@swstechnology.com</strong></div></div>
-            <div><span>◷</span><div><small>ÉDITION</small><strong>Octobre 2026</strong></div></div>
+          <div class="kicker">08 / LET'S BUILD</div>
+          <h2 data-i18n="contactTitle">Build your next <span>technology event.</span></h2>
+          <p data-i18n="contactText">Ready to organize an exhibition, conference or innovation summit? Talk to the SWS TECHNOLOGY team.</p>
+          <div class="contact-list">
+            <a href="https://wa.me/213775964958" target="_blank" rel="noopener"><b>WhatsApp</b><span>+213 775 96 49 58</span></a>
+            <a href="https://wa.me/213550658567" target="_blank" rel="noopener"><b>WhatsApp</b><span>+213 550 65 85 67</span></a>
+            <a href="https://wa.me/213770623423" target="_blank" rel="noopener"><b>WhatsApp</b><span>+213 770 62 34 23</span></a>
+            <a href="mailto:sws.technology@macirvoyages.com"><b>Email</b><span>sws.technology@macirvoyages.com</span></a>
           </div>
         </div>
-
         <form class="contact-form reveal" id="contactForm">
-          <div class="form-row">
-            <label>Nom &amp; prénom<input type="text" name="name" placeholder="Votre nom" required></label>
-            <label>Entreprise<input type="text" name="company" placeholder="Nom de l'entreprise"></label>
-          </div>
-          <div class="form-row">
-            <label>Email<input type="email" name="email" placeholder="vous@entreprise.com" required></label>
-            <label>Téléphone<input type="tel" name="phone" placeholder="+213 ..."></label>
-          </div>
-          <label>Je suis intéressé(e) par
-            <select name="interest">
-              <option>Exposer mon entreprise</option>
-              <option>Visiter l'exposition</option>
-              <option>Devenir partenaire</option>
-              <option>Participer à une conférence</option>
-              <option>Autre demande</option>
-            </select>
-          </label>
-          <label>Message<textarea name="message" rows="5" placeholder="Parlez-nous de votre projet..."></textarea></label>
-          <button class="btn btn-primary form-submit" type="submit">Envoyer ma demande <span>→</span></button>
-          <p class="form-note">Formulaire de démonstration : nous connecterons ensuite ce formulaire à votre email ou à votre service de réception.</p>
-          <div class="form-success" id="formSuccess">Merci ! Votre demande est prête à être envoyée.</div>
+          <label><span data-i18n="name">Full Name</span><input name="name" required></label>
+          <label><span data-i18n="email">Email</span><input type="email" name="email" required></label>
+          <label><span data-i18n="company">Company</span><input name="company"></label>
+          <label><span data-i18n="subject">Subject</span><input name="subject" required></label>
+          <label><span data-i18n="message">Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn-primary" type="submit" data-i18n="send">Send Message →</button>
+          <p class="form-note" id="formNote"></p>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-main">
-      <a class="brand footer-brand" href="#top">
-        <span class="brand-mark">SWS</span>
-        <span class="brand-text">
-          <strong>SWS TECHNOLOGY</strong>
-          <small>EVENTS &amp; EXHIBITIONS</small>
-        </span>
-      </a>
-
-      <div class="footer-links">
-        <a href="#exposition">Exposition</a>
-        <a href="#programme">Programme</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <a class="footer-email" href="mailto:contact@swstechnology.com">contact@swstechnology.com</a>
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="brand" href="#home"><span class="brand-mark">SWS</span><span><strong>SWS TECHNOLOGY</strong><small>Technology Events</small></span></a><p>Technology Events | AI | Industry 4.0</p></div>
+      <div><strong>Explore</strong><a href="#sectors">Sectors</a><a href="#events">Events</a><a href="#gallery">Gallery</a></div>
+      <div><strong>Contact</strong><a href="mailto:sws.technology@macirvoyages.com">Email</a><a href="https://wa.me/213775964958" target="_blank" rel="noopener">WhatsApp</a><span>Ouled Brahim, Sétif, Algeria</span></div>
     </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> SWS Technology. Tous droits réservés.</span>
-      <span>Algérie • Octobre 2026</span>
-    </div>
+    <div class="container copyright"><span>© 2026 SWS TECHNOLOGY. All Rights Reserved.</span><span>Built for the future.</span></div>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">×</button>
-    <img id="lightboxImage" src="" alt="">
-  </div>
-
-  <!-- Demo video modal -->
-  <div class="video-modal" id="videoModal" aria-hidden="true">
-    <button class="lightbox-close" id="videoClose" aria-label="Fermer">×</button>
-    <div class="video-placeholder">
-      <span>VOTRE VIDÉO</span>
-      <h3>Ajoutez votre vidéo de présentation ici</h3>
-      <p>Nous pourrons intégrer votre fichier MP4, YouTube ou Vimeo à cette section.</p>
-    </div>
+  <div class="modal" id="galleryModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card"><button class="modal-close" aria-label="Close">×</button><div class="modal-art"></div><h3 id="modalTitle"></h3></div>
   </div>
 
   <script src="js/script.js"></script>
