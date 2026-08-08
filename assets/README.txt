@@ -1,1 +1,1 @@
-Place your real SWS exhibition photos/videos in this folder.
+Place future images/videos here. The current V4 uses CSS-based visuals and does not require external assets.

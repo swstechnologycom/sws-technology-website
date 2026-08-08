@@ -1,18 +1,22 @@
-# SWS Technology V2
+# SWS Technology V4
 
-Static HTML/CSS/JavaScript website ready for GitHub + Vercel.
+Static website ready for GitHub + Vercel.
 
-## Structure
-- index.html
-- css/style.css
-- js/script.js
-- assets/
+## Contact form
+The contact form is connected to Formspree:
+
+https://formspree.io/f/xppaqknv
+
+The JavaScript submits the form using AJAX/fetch, so the visitor stays on the same page and receives a success/error message.
+
+## Upload
+Keep this structure:
+
+index.html
+css/style.css
+js/script.js
+
+Commit/push to the `main` branch. Vercel will redeploy automatically if the GitHub repository is already connected.
 
 ## Important
-The text and contact details are based on the SWS Technology page:
-https://macirvoyages.com/sws/
-
-Replace the visual placeholders in the gallery with your real exhibition photos/videos when available.
-
-## Deploy
-Upload the files to the root of your GitHub repository and let Vercel redeploy automatically.
+Verify the Target Email and email verification settings inside your Formspree dashboard.
