@@ -41,7 +41,7 @@ let timer;
 slides.forEach((_, i) => {
   const dot = document.createElement("button");
   dot.className = "slider-dot" + (i === 0 ? " active" : "");
-  dot.setAttribute("aria-label", `Aller au service ${i + 1}`);
+  dot.setAttribute("aria-label", `Go to service ${i + 1}`);
   dot.addEventListener("click", () => goToSlide(i));
   dotsWrap.appendChild(dot);
 });
@@ -114,7 +114,7 @@ form.addEventListener("submit", async (e) => {
   statusBox.className = "form-status";
   statusBox.textContent = "";
   submitBtn.disabled = true;
-  submitBtn.querySelector("span").textContent = "Envoi en cours...";
+  submitBtn.querySelector("span").textContent = "Sending...";
 
   try {
     const response = await fetch(form.action, {
@@ -125,10 +125,10 @@ form.addEventListener("submit", async (e) => {
 
     if(response.ok){
       form.reset();
-      statusBox.textContent = "✓ Message envoyé avec succès. Merci — notre équipe vous répondra rapidement.";
+      statusBox.textContent = "✓ Message sent successfully. Thank you — our team will get back to you shortly.";
       statusBox.className = "form-status show success";
     }else{
-      let message = "Une erreur est survenue. Vérifiez les champs et réessayez.";
+      let message = "An error occurred. Please check the fields and try again.";
       try{
         const data = await response.json();
         if(data.errors?.length) message = data.errors.map(x => x.message).join(" ");
@@ -137,11 +137,11 @@ form.addEventListener("submit", async (e) => {
       statusBox.className = "form-status show error";
     }
   }catch(error){
-    statusBox.textContent = "✕ Impossible de contacter le service du formulaire. Contactez-nous directement par e-mail ou WhatsApp.";
+    statusBox.textContent = "✕ Unable to reach the form service. Please contact us directly by email or WhatsApp.";
     statusBox.className = "form-status show error";
   }finally{
     submitBtn.disabled = false;
-    submitBtn.querySelector("span").textContent = "Envoyer le message";
+    submitBtn.querySelector("span").textContent = "Send Message";
   }
 });
 
