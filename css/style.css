@@ -224,3 +224,15 @@ linear-gradient(180deg,#020d16,#03131d 55%,#020b12)}
 .typing-text.is-typing::after{content:"";display:inline-block;width:2px;height:1em;margin-left:5px;vertical-align:-.12em;background:#27d6ff;animation:typingCaret .7s steps(1) infinite}
 @keyframes typingCaret{50%{opacity:0}}
 @media(max-width:950px){.language-switch{margin-right:2px}.hero-content{padding-top:145px}.hero h1{font-size:clamp(46px,12vw,82px)}.hero-subtitle{font-size:20px}.hero-copy{font-size:14px}}
+
+
+/* SWS Service Offers PDF — V16 */
+.service-offers-section{position:relative;overflow:hidden}
+.service-offers-card{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;padding:30px 34px;border:1px solid rgba(44,128,255,.20);border-radius:24px;background:radial-gradient(circle at 90% 20%,rgba(54,142,255,.10),transparent 34%),linear-gradient(135deg,rgba(255,255,255,.96),rgba(240,247,255,.92));box-shadow:0 18px 50px rgba(11,49,99,.10);isolation:isolate}
+.service-offers-card::before{content:"";position:absolute;width:180px;height:180px;right:-70px;top:-85px;border:1px solid rgba(44,128,255,.16);border-radius:50%;box-shadow:0 0 0 18px rgba(44,128,255,.035),0 0 0 38px rgba(44,128,255,.025);z-index:-1}
+.service-offers-icon{width:62px;height:62px;display:grid;place-items:center;border-radius:18px;color:#fff;font-size:30px;font-weight:800;background:linear-gradient(145deg,#168cff,#0757c9);box-shadow:0 12px 28px rgba(14,105,220,.25)}
+.service-offers-copy .section-kicker{margin-bottom:6px}.service-offers-copy h2{margin:0 0 6px}.service-offers-copy p{margin:0;max-width:700px}
+.service-offers-btn{white-space:nowrap;display:inline-flex;align-items:center;gap:10px}.service-offers-btn span{font-size:18px}
+.nav-service-pdf{display:inline-flex!important;align-items:center;gap:7px;white-space:nowrap}.nav-service-pdf span{font-size:18px;line-height:1;color:var(--accent,#168cff)}
+@media (max-width:1100px){.service-offers-card{grid-template-columns:auto 1fr}.service-offers-btn{grid-column:2;justify-self:start}}
+@media (max-width:700px){.service-offers-card{grid-template-columns:1fr;padding:24px}.service-offers-icon{width:54px;height:54px}.service-offers-btn{grid-column:auto;width:100%;justify-content:center}}
